@@ -13,7 +13,7 @@
           <td>
             {{ item }}
           </td>
-          <td @click="removeItem(index)">
+          <td @click="removeItem(index)" style="cursor: pointer">
             <IconClose style="margin-top: 0.6em" />
           </td>
         </tr>
