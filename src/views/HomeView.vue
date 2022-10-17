@@ -6,7 +6,7 @@
         aria-label="todo list"
       >
         <th></th>
-        <tr v-for="(item, index) in toDoList" class="list-items">
+        <tr v-for="(item, index) in toDoList" class="list-items" :key="item">
           <td>
             {{ index + 1 + ". " }}
           </td>

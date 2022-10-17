@@ -13,9 +13,8 @@
   text-align: center;
 }
 
-.header p{
+.header p {
   font-size: 3em;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
 </style>
