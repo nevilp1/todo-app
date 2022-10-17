@@ -13,7 +13,7 @@
           <td>
             {{ item }}
           </td>
-          <td @click="removeItem(index)" style="cursor: pointer">
+          <td @click="removeItem(index)" style="cursor:pointer">
             <IconClose style="margin-top: 0.6em" />
           </td>
         </tr>
@@ -24,7 +24,7 @@
           placeholder="Type something..."
           style="margin-right: 1em"
         />
-        <button class="button-add" @click="addItem">
+        <button class="button-add" @click="addItem" style="cursor:pointer">
           <icon-plus class="icon-plus" /> Add Item
         </button>
       </div>
@@ -35,25 +35,9 @@
 <script setup lang="ts">
 import IconPlus from "./../components/icons/IconPlus.vue";
 import IconClose from "./../components/icons/IconClose.vue";
-import { ref } from "vue";
+import { useItems } from "./useItems";
 
-const toDoList = ref<string[]>([]);
-const newItem = ref<string>("");
-
-const addItem = () => {
-  if (newItem.value === "") {
-    alert("Please type name of the item first");
-  } else if (toDoList.value.includes(newItem.value)) {
-    alert(`Item "${newItem.value}" already exist`);
-  } else {
-    toDoList.value.push(newItem.value);
-    newItem.value = "";
-  }
-};
-
-const removeItem = (item: number) => {
-  toDoList.value.splice(item, 1);
-};
+const { addItem, removeItem, toDoList, newItem } = useItems();
 </script>
 
 <style>
