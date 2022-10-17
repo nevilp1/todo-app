@@ -18,7 +18,7 @@ export function useItems() {
 
     setTimeout(() => {
       message.value = ""
-    }, 3000)
+    }, 5000)
   };
 
   const removeItem = (index: number) => {
