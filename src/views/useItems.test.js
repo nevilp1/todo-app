@@ -3,7 +3,7 @@ import { useItems } from './useItems'
 
 const { addItem, removeItem, toDoList, newItem } = useItems();
 
-test('Adding item to to do list', () => {
+test('Add item to to do list', () => {
     newItem.value = 'Buy flour & sugar'
     addItem()
     expect(toDoList.value.length).toBe(1)
@@ -15,4 +15,17 @@ test('Remove item from the list', () => {
     removeItem(0)
     expect(toDoList.value.length).toBe(0)
     
+})
+
+test('Adding null string should not update the list', () => {
+    newItem.value = ''
+    addItem()
+    expect(toDoList.value.length).toBe(0)
+})
+
+test('Adding duplicate items should not update the list', () => {
+    newItem.value = 'test'
+    addItem()
+    addItem()
+    expect(toDoList.value.length).toBe(1)
 })

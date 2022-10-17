@@ -28,6 +28,7 @@
           <icon-plus class="icon-plus" /> Add Item
         </button>
       </div>
+      <p style="text-align:center; margin-top: 1rem;">{{ message }}</p>
     </div>
   </div>
 </template>
@@ -37,7 +38,7 @@ import IconPlus from "./../components/icons/IconPlus.vue";
 import IconClose from "./../components/icons/IconClose.vue";
 import { useItems } from "./useItems";
 
-const { addItem, removeItem, toDoList, newItem } = useItems();
+const { addItem, removeItem, toDoList, newItem, message } = useItems();
 </script>
 
 <style>
