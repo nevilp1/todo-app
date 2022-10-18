@@ -1,6 +1,9 @@
 # test-fe-mapan
 
-This template should help get you started developing with Vue 3 in Vite.
+## About
+
+Simple Todo list application using Vue 3 Composition API.
+### Deployed on [Netlify](https://nevilp1-todo-list.netlify.app/)
 
 ## Recommended IDE Setup
 

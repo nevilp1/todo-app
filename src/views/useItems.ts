@@ -7,7 +7,7 @@ export function useItems() {
 
   const addItem = () => {
     if (newItem.value === "") {
-      message.value = "Please type name of the item first";
+      message.value = "Please type the name of the item first";
     } else if (toDoList.value.includes(newItem.value)) {
       message.value = `Item "${newItem.value}" already exist`;
     } else {

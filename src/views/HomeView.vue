@@ -13,24 +13,24 @@
           <td>
             {{ item }}
           </td>
-          <td @click="removeItem(index)" style="cursor:pointer">
-            <IconClose style="margin-top: 0.6em" />
+          <td @click="removeItem(index)" style="cursor: pointer">
+            <IconClose style="margin-bottom;: 0.6em" />
           </td>
         </tr>
       </table>
-      <div class="form-input">
-        <input
-          v-model="newItem"
-          placeholder="Type something..."
-          style="margin-right: 1em"
-        />
-        <button class="button-add" @click="addItem" style="cursor:pointer">
-          <icon-plus class="icon-plus" /> Add Item
-        </button>
-      </div>
-      <p style="text-align:center; margin-top: 1rem;">{{ message }}</p>
     </div>
   </div>
+  <div class="form-input">
+    <input
+      v-model="newItem"
+      placeholder="Type something..."
+      style="margin-right: 1em"
+    />
+    <button class="button-add" @click="addItem" style="cursor: pointer">
+      <icon-plus class="icon-plus" /> Add Item
+    </button>
+  </div>
+  <p style="text-align: center; margin-top: 1rem">{{ message }}</p>
 </template>
 
 <script setup lang="ts">
@@ -43,14 +43,13 @@ const { addItem, removeItem, toDoList, newItem, message } = useItems();
 
 <style>
 .content {
-  padding-top: 2em;
+  padding: 1em;
 }
 
 .scrollable {
   overflow-y: auto;
-  overflow-x: auto;
-  white-space: nowrap;
   height: 550px;
+  margin: 1em;
 }
 
 .button-add {
@@ -60,7 +59,7 @@ const { addItem, removeItem, toDoList, newItem, message } = useItems();
   border-radius: 10px;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   display: flex;
   align-items: center;
 }
@@ -75,6 +74,17 @@ const { addItem, removeItem, toDoList, newItem, message } = useItems();
 }
 
 .list-items td {
-  font-size: 24px;
+  font-size: 16px;
+  vertical-align: text-top;
+}
+
+@media screen and (min-width: 1024px) {
+  .list-items td {
+    font-size: 22px;
+  }
+
+  .button-add {
+    font-size: 16px;
+  }
 }
 </style>
