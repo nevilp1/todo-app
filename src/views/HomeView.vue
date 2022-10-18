@@ -48,7 +48,7 @@ const { addItem, removeItem, toDoList, newItem, message } = useItems();
 
 .scrollable {
   overflow-y: auto;
-  height: 550px;
+  height: 500px;
   margin: 1em;
 }
 
